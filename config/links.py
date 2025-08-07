@@ -8,3 +8,4 @@ class Links:
     BLOG = f"{HOST}/blog"
     CONTACTS = f"{HOST}/contacts"
     CONTACTS_BRIEF = f"{HOST}/contacts#brief"
+    MAIN_PAGE = f"{HOST}"

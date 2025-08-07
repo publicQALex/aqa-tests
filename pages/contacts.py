@@ -1,7 +1,7 @@
 import allure
 from base.base_page import BasePage
 from config.links import Links
-from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
 class Contacts(BasePage):
