@@ -11,8 +11,7 @@ class Main_Page(BasePage):
     PAGE_URL = Links.MAIN_PAGE
 
     footer_class = (By.XPATH, "/html/body/main/footer")
-    #self.driver.execute_script("arguments[0].scrollIntoView(true);", footer_class)
-
+    
     @allure.step("Try to find footer elements")
     def find_footer_elements_main_page(self):
         self.wait.until(EC.visibility_of_element_located(self.footer_class))

@@ -8,7 +8,7 @@ from selenium.common.exceptions import NoSuchElementException
 class Contacts_Brief(BasePage):
     PAGE_URL = Links.CONTACTS_BRIEF
     footer_class = (By.XPATH, "/html/body/main/footer")
-    #self.driver.execute_script("arguments[0].scrollIntoView(true);", footer_class)
+    
 
     @allure.step("Go to Contacts#Brief' page")
     def find_footer_elements_contacts_brief(self):

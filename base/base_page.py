@@ -3,7 +3,7 @@ import allure
 from allure_commons.types import AttachmentType
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+from selenium.webdriver.common.by import By
 
 class BasePage:
     
@@ -26,3 +26,7 @@ class BasePage:
             name=screenshot_name,
             attachment_type=AttachmentType.PNG
         )
+
+    def get_footer_locator(self):
+        footer = (By.XPATH, "/html/body/main/footer")
+        return footer

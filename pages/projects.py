@@ -10,8 +10,7 @@ class Projects(BasePage):
 
     PAGE_URL = Links.PROJECTS
     footer_class = (By.XPATH, "/html/body/main/footer")
-    #self.driver.execute_script("arguments[0].scrollIntoView(true);", footer_class)
-
+    
     @allure.step("Go to 'Projects' page")
     def find_footer_elements_projects(self):
         self.wait.until(EC.visibility_of_element_located(self.footer_class))

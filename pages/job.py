@@ -9,8 +9,7 @@ from selenium.common.exceptions import NoSuchElementException
 class Job(BasePage):
     PAGE_URL = Links.JOB
     footer_class = (By.XPATH, "/html/body/main/footer")
-    #self.driver.execute_script("arguments[0].scrollIntoView(true);", footer_class)
-    
+        
 
     @allure.step("Go to 'Job' page")
     def find_footer_elements_job(self):
