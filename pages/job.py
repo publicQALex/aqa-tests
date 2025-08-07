@@ -9,12 +9,15 @@ from selenium.common.exceptions import NoSuchElementException
 class Job(BasePage):
     PAGE_URL = Links.JOB
     footer_class = (By.XPATH, "/html/body/main/footer")
+    #self.driver.execute_script("arguments[0].scrollIntoView(true);", footer_class)
+    
 
     @allure.step("Go to 'Job' page")
     def find_footer_elements_job(self):
         self.wait.until(EC.visibility_of_element_located(self.footer_class))
         footer_missing_elements = []
         elements = {
+            #На случай если вдруг на разных страницах разное содержание футера, можно было бы вынести в base_page.py
             "footer_class": "/html/body/main/footer",
             "footer_button_new_project": "/html/body/main/footer/div[1]/button",
             "footer_social_button_be": "/html/body/main/footer/div[1]/div[1]/a[1]",
